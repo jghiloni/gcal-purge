@@ -24,7 +24,11 @@ func getClient(opts *options) {
 	}
 
 	l("Reading app credentials from $HOME/credentials.json")
-	b, err := ioutil.ReadFile(filepath.Join(os.Getenv("HOME"), "credentials.json"))
+	home, err := os.UserHomeDir()
+	if err != nil {
+		log.Fatalf("Unable to read client secret file: %v", err)
+	}
+	b, err := ioutil.ReadFile(filepath.Join(home, "credentials.json"))
 	if err != nil {
 		log.Fatalf("Unable to read client secret file: %v", err)
 	}
@@ -35,7 +39,7 @@ func getClient(opts *options) {
 		log.Fatalf("Unable to parse client secret file to config: %v", err)
 	}
 
-	tokFile := filepath.Join(os.Getenv("HOME"), ".gcal-purge")
+	tokFile := filepath.Join(home, ".gcal-purge")
 	tok, err := tokenFromFile(*opts, tokFile)
 	if err != nil {
 		tok = getTokenFromWeb(*opts, config)
