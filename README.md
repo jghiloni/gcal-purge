@@ -1,7 +1,8 @@
 # gcal-purge
 
 This simple tool will delete all google calendar events within a time range.
-This is currently not designed for public use, and will not be supported.
+This is currently not designed for public use, and will not be supported
+outside of my Pivotal colleagues.
 
 ```sh
 Options:
