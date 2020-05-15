@@ -18,12 +18,7 @@ Steps to use:
 
 1. Download the latest compiled binary from the Releases page or build from
    source.
-1. Enable the Google Calendar API for your Google Account (Some accounts, like
-   corporate managed accounts, will not allow you to do this. You can enable it
-   on another personal Google Account and log into any Google Account). Follow
-   step 1 [here](https://developers.google.com/calendar/quickstart/go#step_1_turn_on_the).
-   Make sure to configure your OAuth client as a desktop app. Save the downloaded
-   `credentials.json` file to your home directory.
+1. Ping me for app credentials
 
 When you run the app, it will open a browser and let you log in to the Google
 Account of your choice. When you copy the token and paste into the CLI, it will
