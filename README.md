@@ -4,7 +4,7 @@ This simple tool will delete all google calendar events within a time range.
 This is currently not designed for public use, and will not be supported
 outside of my Pivotal colleagues.
 
-```sh
+```
 Options:
     --calendar-id, -c  string  The ID of the Google Calendar you wish to purge (default: primary)
     --dry-run          bool    Will print what will happen to stderr, but won't actually do it
