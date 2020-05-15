@@ -81,7 +81,7 @@ func formatTimes(opts options) (string, string, error) {
 			return "", "", err
 		}
 
-		st = time.Date(tmp.Year(), tmp.Month(), tmp.Day(), 23, 59, 59, 999999999, time.Local)
+		st = time.Date(tmp.Year(), tmp.Month(), tmp.Day(), 0, 0, 0, 1, time.Local)
 	}
 
 	if opts.EndDate == "" {
